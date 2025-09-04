@@ -17,8 +17,8 @@ int main()
     scanf("%c", &estadoCarta1);
     printf("Qual o codigo da carta?\n");
     scanf("%s", &codigoCarta1);
-    printf("Qual o nome da cidade?\n");
-    fgets(nomeCidade1, 20, stdin);
+    printf("Qual o nome da cidade? \n");
+    scanf(" %[^\n]", nomeCidade1);
     printf("Qual o numero populacional?\n");
     scanf("%i", &populacaoCidade1);
     printf("Qual a area da cidade? Ex: 3111.33\n");
@@ -37,7 +37,7 @@ int main()
     printf("PIB: %.2f bilhões de reais\n", pibCidade1);
     printf("Pontos Turisticos: %d\n", numeroTuristico1);
     printf("Densidade Populacional: %.2f hab/km²\n", populacaoCidade1 / areaCidade1);
-    printf("PIB per Capita: %.2f reais\n", pibCidade1 / populacaoCidade1);
+    printf("PIB per Capita: %.2f reais\n", (pibCidade1 * 1000000000) / populacaoCidade1);
 
     printf("<----------------------------------->\n");
     printf("Entre com os dados da Carta 2 a ser cadastrada!\n");
@@ -46,7 +46,7 @@ int main()
     printf("Qual o codigo da carta?\n");
     scanf("%s", &codigoCarta2);
     printf("Qual o nome da cidade?\n");
-    fgets(nomeCidade2, 20, stdin);
+    scanf(" %[^\n]", nomeCidade2);
     printf("Qual o numero populacional?\n");
     scanf("%i", &populacaoCidade2);
     printf("Qual a area da cidade? Ex: 3111.33\n");
@@ -65,6 +65,6 @@ int main()
     printf("PIB: %.2f bilhões de reais\n", pibCidade2);
     printf("Pontos Turisticos: %d\n", numeroTuristico2);
     printf("Densidade Populacional: %.2f hab/km²\n", populacaoCidade2 / areaCidade2);
-    printf("PIB per Capita: %.2f reais\n", pibCidade2 / populacaoCidade2);
+    printf("PIB per Capita: %.2f reais\n", (pibCidade2 * 1000000000) / populacaoCidade2);
     return 0;
 }
